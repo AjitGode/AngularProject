@@ -1,0 +1,51 @@
+.gradient-custom{
+    background: -webkit-linear-gradient(left, #f4f5f7, #dfb3f5);
+    box-shadow: 10px 10px 15px black;
+    
+}
+input[type="text"]{
+    margin-left: 60px;
+    border-radius: 20px;
+}
+input[type="password"]{
+    margin-left: 60px;
+    border-radius: 20px;
+}
+
+input[type="email"]{
+    margin-left: 60px;
+    border-radius: 20px;
+}
+.lbl{
+    margin-left: 60px;
+}
+#btn{
+    margin-left: 250px;
+    border-radius: 20px;
+}
+.note{
+   
+    color: rgba(76, 38, 247, 0.979);
+    
+}
+.lbl1{
+    margin-top: 20px;
+    margin-left: 190px;
+}
+.select{
+    border-radius: 20px;
+    
+}
+.select1{
+    margin-left: 10px;
+    width: 90%;
+}
+.invalid{
+    background: none;
+}
+.lbl3{
+    border: none;
+    background: none;
+    color: red;
+    margin-left: 60px;
+}

@@ -1,0 +1,35 @@
+<form #frmData="ngForm">
+    
+            
+    <div class="box">
+        <div>
+            <h2 class="text-uppercase text-center mb-5 "><img src="../../assets/male.png" alt="user"></h2>
+           </div>
+           <div class="form-group">
+           <div class="col-md-5 mb-4">
+            <input type="text" class="form-control" placeholder="Enter User Name" name="userId"  #reffname="ngModel"  [(ngModel)]="userId"  ngModel required>
+
+            <span class="alert alert-danger span" *ngIf="reffname.invalid && reffname.touched">
+                <span class="span" *ngIf="reffname.hasError('required')">This field is required. </span>
+            </span>
+           </div>
+          
+
+           <div class="col-md-5 mb-4">
+            <input type="password" class="form-control" placeholder="Enter User Password" name="userPass" pattern="(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,16}" #refpass="ngModel" [(ngModel)]="userPass" ngModel required>
+
+            <span class="alert alert-danger span" *ngIf="refpass.invalid && refpass.touched">
+                <span class="span" *ngIf="refpass.hasError('required')">This field is required. </span>
+                <span class="span" *ngIf="refpass.hasError('pattern')">Password Should be One Capital Letter And One symbol and maximum 8 character. </span>
+            </span>
+    
+        </div>
+            </div>
+         
+    
+            <button type="button" class="btn btn-primary" (click)="checkData()"><i class="fa fa-sign-in" aria-hidden="true"></i>&nbsp;&nbsp;Login</button>
+        
+        </div>
+        
+    
+    </form>

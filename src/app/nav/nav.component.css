@@ -1,0 +1,18 @@
+.img{
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    border: 5px solid salmon;
+    text-shadow: 4px 4px 5px black;
+
+}
+.heading{
+    /* color:rgb(78, 182, 247); */
+    color: #00509d;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 65px;
+    font-weight: 150%;
+    margin-left: 90px;
+    text-shadow: 4px 4px 5px black;
+
+}

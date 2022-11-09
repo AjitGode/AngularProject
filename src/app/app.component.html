@@ -1,0 +1,66 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    </head>
+
+<div class="container mt-5">
+    <div class="card border-primary " style="width: 100%; margin-right: 40px; border-radius: 30px;">
+        <div class="card-header border-success " style="border-radius: 30px; background-color: #fdfffc;" >
+         <app-nav *ngIf="_router.url !='/' &&  _router.url !='/login'"></app-nav>
+    </div>
+    <mat-sidenav-container style="background-color: linen;">
+        
+        <mat-sidenav #sidenav opened="true" mode="side"   *ngIf="_router.url !='/' &&  _router.url !='/login'">
+          <!--<button mat-icon-button style="margin-left: 100px;">
+              <mat-icon (click)="sidenav.toggle();">menu</mat-icon>
+              Menu
+          </button>-->
+         
+        <mat-nav-list>
+            
+            <br><br><br><br><br><br><br><br>
+            <button class="btn btn-light" routerLink="enroll/dashboard">
+              <i class="fa fa-plus" aria-hidden="true"></i>
+              <span>Enrollment</span>
+          </button>
+  
+          <button class="btn btn-light" routerLink="institute/dashboard">
+              <i class="fa fa-university" aria-hidden="true"></i>
+              <span>Institute</span>
+          </button>
+  
+          <button class="btn btn-light" routerLink="course/dashboard">
+              <i class="fa fa-book" aria-hidden="true"></i>
+              <span>Courses</span>
+          </button>
+  
+          <button class="btn btn-light" routerLink="users/dashboard">
+              <i class="fa fa-users" aria-hidden="true"></i>
+              <span>Users</span>
+          </button>
+          <div class="logo-nav">
+            <img src="../assets/book.png" height="70%" width="70%">
+        </div>
+            
+        </mat-nav-list>
+        </mat-sidenav>
+        <mat-sidenav-content>
+            <div class="mt-4 main-body" >
+                
+              <router-outlet></router-outlet>
+              
+          </div>
+        </mat-sidenav-content>
+      </mat-sidenav-container>
+  
+    <div class="card-footer border-primary">
+        <app-footer></app-footer>
+    </div>
+    
+    </div>
+</div>
+</html>
+

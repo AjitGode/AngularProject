@@ -1,0 +1,276 @@
+{
+  "enrollment": [
+    {
+      "id": 103,
+      "name": "Sanket Modhe",
+      "contact": "9876543210",
+      "email": "modhesanket11@gmail.com",
+      "qualification": "mca",
+      "specialization": "Computer Application",
+      "appearing": "appearing",
+      "passout": "2022",
+      "college": "Indira College Of Engineering And Management,Pune",
+      "city": "Sangamner",
+      "workexp": "NA",
+      "lighthouseStd": "yes",
+      "lighthouseBranch": "sangamner Branch",
+      "course": "java full stack",
+      "reference": "social media",
+      "batch": "weekend"
+    },
+    {
+      "id": 104,
+      "name": "Suyog Rahane",
+      "contact": "9876543210",
+      "email": "suyograhane45@gmail.com",
+      "qualification": "mca",
+      "specialization": "Computer Application",
+      "appearing": "appearing",
+      "passout": "2022",
+      "college": "Indira College Of Engineering And Management,Pune",
+      "city": "Sangamner",
+      "workexp": "NA",
+      "lighthouseStd": "yes",
+      "lighthouseBranch": "sangamner Branch",
+      "course": "java full stack",
+      "reference": "social media",
+      "batch": "weekend"
+    },
+    {
+      "id": 105,
+      "name": "Suyog Raju Darekar",
+      "contact": "9876543210",
+      "email": "suyogdarekar77076@gmail.com",
+      "qualification": "mca",
+      "specialization": "Computer Application",
+      "appearing": "appearing",
+      "passout": "2022",
+      "college": "Akole College",
+      "city": "Sangamner",
+      "workexp": "1",
+      "lighthouseStd": "yes",
+      "lighthouseBranch": "sangamner Branch",
+      "course": "java full stack",
+      "reference": "social media",
+      "batch": "weekend"
+    },
+    {
+      "name": "Akash Gunjal",
+      "contact": "9876543210",
+      "email": "gunjalakash88@gmail.com",
+      "qualification": "mca",
+      "specialization": "Computer Application",
+      "appearing": "appearing",
+      "passout": "2022",
+      "college": "Indira College Of Engineering And Management,Pune",
+      "city": "Sangamner",
+      "workexp": "1",
+      "id": 106,
+      "lighthouseStd": "yes",
+      "lighthouseBranch": "sangamner Branch",
+      "course": "java full stack",
+      "reference": "social media",
+      "batch": "weekend"
+    },
+    {
+      "name": "Vaibhav Gode",
+      "contact": "7350774640",
+      "email": "vaibhavgode25@gmail.com",
+      "qualification": "hsc",
+      "specialization": "",
+      "appearing": "appearing",
+      "passout": "",
+      "college": "Sarole college",
+      "city": "Sangamner",
+      "workexp": "NA",
+      "lighthouseStd": "yes",
+      "lighthouseBranch": "TechOrbit",
+      "course": "Python",
+      "reference": "friends",
+      "batch": "Weekend",
+      "id": 107
+    },
+    {
+      "name": "Akash",
+      "contact": "8390889925",
+      "email": "abc@gmail.com",
+      "qualification": "mca",
+      "specialization": "Computer Application",
+      "appearing": "appearing",
+      "passout": "",
+      "college": "Indira College Of Engineering And Management,Pune",
+      "city": "Sangamner",
+      "workexp": "NA",
+      "lighthouseStd": "yes",
+      "lighthouseBranch": "FirstBit Solution",
+      "course": "MEAN MERN",
+      "reference": "social media",
+      "batch": "Weekday",
+      "id": 108
+    },
+    {
+      "name": "Vaibhav Gode",
+      "contact": "7350774640",
+      "email": "vaibhavgode25@gmail.com",
+      "qualification": "bca",
+      "specialization": "Computer Application",
+      "appearing": "appearing",
+      "passout": "",
+      "college": "Sarole college",
+      "city": "Sangamner",
+      "workexp": "NA",
+      "lighthouseStd": "yes",
+      "lighthouseBranch": "FirstBit Solution",
+      "course": "MEAN MERN",
+      "reference": "social media",
+      "batch": "Weekday",
+      "id": 109
+    },
+    {
+      "name": "Rushikesh modhe",
+      "contact": "9922351778",
+      "email": "modhesanket11@gmail.com",
+      "qualification": "bca",
+      "specialization": "Computer Application",
+      "appearing": "completed",
+      "passout": "2020",
+      "college": "Indira College Of Engineering And Management,Pune",
+      "city": "Sangamner",
+      "workexp": "0",
+      "lighthouseStd": "yes",
+      "lighthouseBranch": "FirstBit Solution",
+      "course": "MEAN MERN",
+      "reference": "social media",
+      "batch": "Weekend",
+      "id": 110
+    },
+    {
+      "name": "Ajit Gode",
+      "contact": "8390889925",
+      "email": "godeajit71@gmail.com",
+      "qualification": "bsc",
+      "specialization": "Computer Application",
+      "appearing": "completed",
+      "passout": "2018",
+      "college": "Indira College Of Engineering And Management,Pune",
+      "city": "Sangamner",
+      "workexp": "NA",
+      "lighthouseStd": "no",
+      "lighthouseBranch": "",
+      "course": "MEAN MERN",
+      "reference": "advertisment",
+      "batch": "Weekday",
+      "id": 111
+    }
+  ],
+  "institute": [
+    {
+      "id": 101,
+      "branchname": "TechOrbit",
+      "contact": 8390889925,
+      "city": "Nashik"
+    },
+    {
+      "id": 102,
+      "branchname": "FirstBit Solution",
+      "contact": "8390889925",
+      "city": "Pune"
+    },
+    {
+      "branchname": "Profound Edutech",
+      "contact": "7202544222",
+      "city": "Pune",
+      "id": 103
+    },
+    {
+      "branchname": "SevenMentor Python Classes",
+      "contact": "7507414653",
+      "city": "Pune",
+      "id": 104
+    },
+    {
+      "branchname": "Vision Academy",
+      "contact": "9822506209",
+      "city": "Nashik",
+      "id": 105
+    },
+    {
+      "branchname": "Infoway Technologies ",
+      "contact": "9876543210",
+      "city": "Pune",
+      "id": 106
+    },
+    {
+      "branchname": "Profound Edutech",
+      "contact": "7350774640",
+      "city": "Pune",
+      "id": 107
+    }
+  ],
+  "course": [
+    {
+      "id": 101,
+      "coursename": "Full Stack Developer",
+      "courseduration": "6 month",
+      "coursefees": "12000"
+    },
+    {
+      "id": 102,
+      "coursename": "MEAN MERN",
+      "courseduration": "5 month",
+      "coursefees": "10000"
+    },
+    {
+      "coursename": "Python",
+      "courseduration": "6 Month",
+      "coursefees": "11000",
+      "id": 103
+    },
+    {
+      "coursename": "Aptitude",
+      "courseduration": "6 Month",
+      "coursefees": "0",
+      "id": 104
+    },
+    {
+      "id": 105,
+      "coursename": "Soft Skill",
+      "courseduration": "5 month",
+      "coursefees": "10000"
+    }
+  ],
+  "user": [
+    {
+      "id": 101,
+      "empid": "Admin",
+      "name": "Ajit Gode",
+      "password": "admin@123",
+      "contact": 8390889925,
+      "email": "godeajit95@gmail.com"
+    },
+    {
+      "empid": "EMP102",
+      "name": "Sanket Modhe",
+      "password": "Sanket@2543",
+      "contact": "9876543210",
+      "email": "modhesanket11@gmail.com",
+      "id": 102
+    },
+    {
+      "empid": "EMP103",
+      "name": "Suyog Rahane",
+      "password": "Suyog@2543",
+      "contact": "7888156550",
+      "email": "suyograhane45@gmail.com",
+      "id": 103
+    },
+    {
+      "id": 104,
+      "empid": "Emp444",
+      "name": "Sanket Modhe",
+      "password": "Sanket@243",
+      "contact": "7350774640",
+      "email": "modhesanket11@gmail.com"
+    }
+  ]
+}

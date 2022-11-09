@@ -1,0 +1,45 @@
+.gradient-custom{
+    background: -webkit-linear-gradient(left, #f4f5f7, #dfb3f5);
+    box-shadow: 10px 10px 15px black;
+    
+}
+input[type="text"]{
+    margin-left: 200px;
+    border-radius: 20px;
+}
+input[type="password"]{
+    margin-left: 200px;
+    border-radius: 20px;
+}
+
+input[type="email"]{
+    margin-left: 200px;
+    border-radius: 20px;
+}
+.lbl{
+    margin-left: 200px;
+    
+    width: 150px;
+}
+#btn{
+    margin-left: 300px;
+    border-radius: 20px;
+}
+
+.lbl1{
+    margin-top: 20px;
+    margin-left: 200px;
+}
+
+.note{
+   
+    color: rgba(76, 38, 247, 0.979);
+    
+}
+.lbl3{
+    border: none;
+    background: none;
+    color: red;
+    width: 200px;
+    margin-left: 220px;
+}

@@ -1,0 +1,51 @@
+<form [formGroup]="courseData" class="row g-4 row justify-content-center align-items-center"  (ngSubmit)="getData(courseData.value)">
+    <div class="card border-primary shadow-2-strong vh-50 gradient-custom"style="width: 70%; border-radius: 15px;">
+        <div class="card-body border-primary">
+            <div class="note">
+                <h2 class="text-uppercase text-center mb-5 ">Add Course Details</h2>
+               </div>
+ <div class="form-group">
+    <div class="col-md-5 mb-4">
+        <label class="form-label lbl">  Course Name:</label>
+    <input type="text" name="coursename"class="form-control" placeholder="Enter Course Name" formControlName="coursename">
+    <div class="alert-danger mt-1 lbl3" *ngIf="courseData.get('coursename').invalid && courseData.get('coursename').touched">
+        <div *ngIf="courseData.get('coursename').errors.required">This Field is Required</div>
+        <div class="mt-1" *ngIf="courseData.get('coursename').errors.pattern">Course Name Should Must Contain Only Charactor min 3 and max 30.</div>
+      </div>
+   </div>
+   </div>
+
+
+   <div class="form-group">
+     <div class="col-md-5 mb-4">
+       <label class="form-label lbl"> Course Duration :</label>
+    <input type="text" name="courseduration" class="form-control" placeholder="Enter Duration"  formControlName="courseduration">
+    <div class="alert-danger mt-1 lbl3" *ngIf="courseData.get('courseduration').invalid && courseData.get('courseduration').touched">
+        <div *ngIf="courseData.get('courseduration').errors.required">This Field is Required</div>
+        
+      </div>
+   </div>
+   </div>
+
+   <div class="form-group">
+    <div class="col-md-5 mb-4">
+        <label class="form-label lbl"> Course Fees:</label>
+    <input type="text" name="coursefees" class="form-control" placeholder="Enter Course Fees" maxlength="10" formControlName="coursefees">
+    <div class="alert-danger mt-1 lbl3" *ngIf="courseData.get('coursefees').invalid && courseData.get('coursefees').touched">
+        <div *ngIf="courseData.get('coursefees').errors.required">This Field is Required</div>
+        <div class="mt-1" *ngIf="courseData.get('coursefees').errors.pattern">Enter Only Numbers</div>
+      </div>
+   </div>
+    </div>
+
+   
+
+   <div class="mx-3 mt-3">
+    <div  id="btn">
+       <button type="submit" class="btn btn-primary" [disabled]="courseData.invalid">Submit</button>
+   </div>
+   </div>
+   </div>
+   </div>
+</form>
+

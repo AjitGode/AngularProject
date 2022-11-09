@@ -1,0 +1,243 @@
+<form [formGroup]="enrollData" class="row g-4 row justify-content-center align-items-center" (ngSubmit)="getData(enrollData.value)">
+    <div class="card mx-4 shadow-2-strong vh-50 gradient-custom" style="width: 70%; border-radius: 15px;">
+        <div class="card-body mx-4">
+            <div class="note">
+            <h2 class="text-uppercase text-center mb-5 ">Update EnrollMent</h2>
+           </div><br>
+
+           <div class="row">
+            <div class="col-md-5 mb-4">
+                <label class="form-label lbl">Enter Your Full Name:</label>
+                <input type="text" name="name"  class="form-control" placeholder="Enter Your Full Name" formControlName="name" [ngModel]="enrollObj?.name" >
+                <div class="alert-danger mt-1 lbl3" *ngIf="enrollData.get('name').invalid && enrollData.get('name').touched">
+                    <div *ngIf="enrollData.get('name').errors.required">This Field is Required</div>
+                    <div class="mt-1" *ngIf="enrollData.get('name').errors.pattern">Full Name Should Must Contain Only Charactor min 3 and max 30.</div>
+                  </div>
+            </div>
+              
+            <div class="col-md-5 mb-4">
+                <label class="form-label lbl">Enter Your Contact No:</label>
+                <input type="text" name="contact"  class="form-control" placeholder="Enter Your Mobile No" formControlName="contact" [ngModel]="enrollObj?.contact" >
+                <div class="alert-danger mt-1 lbl3" *ngIf="enrollData.get('contact').invalid && enrollData.get('contact').touched">
+                    <div *ngIf="enrollData.get('contact').errors.required">This Field is Required</div>
+                    <div class="mt-1" *ngIf="enrollData.get('contact').errors.pattern">Phone number with 7-9 and remaing 9 digit with 0-9..</div>
+                  </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-5 mb-4">
+                <label class="form-label lbl">Enter Your Email:</label>
+                <input type="text" name="email"  class="form-control" placeholder="Enter Your Full Name" formControlName="email" [ngModel]="enrollObj?.email" >
+                <div class="alert-danger mt-1 lbl3" *ngIf="enrollData.get('email').invalid && enrollData.get('email').touched">
+                    <div *ngIf="enrollData.get('email').errors.required">This Field is Required</div>
+                    <div class="mt-1" *ngIf="enrollData.get('email').errors.pattern">Enter Valid Email..</div>
+                  </div>
+            </div>
+            <div class="col-md-5 mb-4">
+                <label class="form-label lbl">Enter Your Qualification:</label>
+                <select class="form-select lbl select" name="qualification" formControlName="qualification"  [ngModel]="enrollObj?.qualification">
+                    <option selected value="">Choose Course</option>
+                    <option value="bsc">BSC</option>
+                    <option value="bca">BCA</option>
+                    <option value="be">BE</option>
+                    <option value="mca">MCA</option>
+                    <option value="msc">MSC</option>
+                  </select>
+                  <div class="alert-danger mt-1 lbl3" *ngIf="enrollData.get('qualification').invalid && enrollData.get('qualification').touched">
+                    <div *ngIf="enrollData.get('qualification').errors.required">This Field is Required</div>
+                    </div>
+         </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-5 mb-4">
+                <label class="form-label lbl">specialization:</label>
+                <input type="text" name="specialization"  class="form-control" placeholder="Enter Your specialization" formControlName="specialization" [ngModel]="enrollObj?.specialization" >
+                <div class="alert-danger mt-1 lbl3" *ngIf="enrollData.get('specialization').invalid && enrollData.get('specialization').touched">
+                    <div *ngIf="enrollData.get('specialization').errors.required">This Field is Required</div>
+                    <div class="mt-1" *ngIf="enrollData.get('specialization').errors.pattern">specialization  Should Must Contain Only Charactor min 3 and max 30.</div>
+                  </div>
+            </div>
+             
+            <div class="col-md-5 mb-4">
+                <label class="custom-control-label lbl">Appearing:</label>
+                <div class="custom-control">
+                    <input class="custom-control-input lbl" type="radio"  name="appearing" value="appearing" formControlName="appearing" [ngModel]="enrollObj?.appearing" (change)="toggleVisibility($event)"  >&nbsp;&nbsp;&nbsp;
+                    <label class="custom-control-label">
+                      Appear
+                    </label>
+                    <!--<div class="alert-danger mt-1 lbl" *ngIf="enrollData.get('appearing').invalid && enrollData.get('appearing').touched">
+                        <div *ngIf="enrollData.get('appearing').errors.required">This Field is Required</div>
+                        </div>-->
+
+                        
+                </div>
+                      
+                
+                <div class="custom-control">
+                  <input class="custom-control-input lbl" type="radio"  name="appearing" value="completed" formControlName="appearing" [ngModel]="enrollObj?.appearing" (change)="toggleVisibility($event)"  >&nbsp;&nbsp;&nbsp;
+                  <label class="custom-control-label">
+                    Completed
+                  </label>
+                   <!--- <div class="alert-danger mt-1 lbl" *ngIf="enrollData.get('appearing1').invalid && enrollData.get('appearing1').touched">
+                        <div *ngIf="enrollData.get('appearing1').errors.required">This Field is Required</div>
+                        </div>-->
+                </div>
+
+                </div>
+             </div>
+        
+         
+        <div class="row">
+
+          <div class="col-md-5 mb-4" *ngIf="showpassout">
+            <label class="form-label lbl">PassOut Year:</label>
+            <select class="form-select lbl select" name="passout" formControlName="passout" [ngModel]="enrollObj?.passout" >
+                <option selected value="">Choose Year</option>
+                <option value=2018>2018</option>
+                <option value=2019>2019</option>
+                <option value=2020>2020</option>
+                <option value=2021>2021</option>
+                <option value=2022>2022</option>
+              </select>
+              <div class="alert-danger mt-1 lbl3" *ngIf="enrollData.get('passout').invalid && enrollData.get('passout').touched">
+                <div *ngIf="enrollData.get('passout').errors.required">This Field is Required</div>
+                </div>
+     </div>
+   
+     <div class="col-md-5 mb-4">
+      <label class="form-label lbl">Enter Your College Name:</label>
+      <input type="text" name="college"  class="form-control" placeholder="Enter Your Full Name" formControlName="college" [ngModel]="enrollObj?.college" >
+      <div class="alert-danger mt-1 lbl3" *ngIf="enrollData.get('college').invalid && enrollData.get('college').touched">
+          <div *ngIf="enrollData.get('college').errors.required">This Field is Required</div>
+          
+        </div>
+        </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-5 mb-4">
+            <label class="form-label lbl">Enter Your City:</label>
+            <input type="text" name="city"  class="form-control" placeholder="Enter Your Full Name" formControlName="city" [ngModel]="enrollObj?.city" >
+            <div class="alert-danger mt-1 lbl3" *ngIf="enrollData.get('city').invalid && enrollData.get('city').touched">
+                <div *ngIf="enrollData.get('city').errors.required">This Field is Required</div>
+                
+              </div>
+              </div>
+
+           
+              <div class="col-md-5 mb-4">
+                <label class="form-label lbl">Work Experiance:</label>
+                <input type="text" name="workexp"  class="form-control" placeholder="Enter Your Full Name" formControlName="workexp" [ngModel]="enrollObj?.workexp" >
+                <div class="alert-danger mt-1 lbl3" *ngIf="enrollData.get('workexp').invalid && enrollData.get('workexp').touched">
+                    <div *ngIf="enrollData.get('workexp').errors.required">This Field is Required</div>
+                    
+                  </div>
+                  </div>
+
+        </div>
+
+        <div class="row">
+          <div class="col-md-5 mb-4">
+            <label class="custom-control-label lbl">Are You Lighthouse Student:</label>
+
+            <div class="custom-control">
+              <input class="custom-control-input lbl" type="radio" name="lighthouseStd" value="yes" formControlName="lighthouseStd" [ngModel]="enrollObj?.lighthouseStd" (change)="toggleVisibility($event)" >&nbsp;&nbsp;&nbsp;
+              <label class="custom-control-label">
+                Yes
+              </label>
+            </div>
+            
+            <div class="custom-control">
+              <input class="custom-control-input lbl" type="radio" name="lighthouseStd" value="no" formControlName="lighthouseStd" [ngModel]="enrollObj?.lighthouseStd" (change)="toggleVisibility($event)">&nbsp;&nbsp;&nbsp;
+              <label class="custom-control-label" >
+                No
+              </label>
+              
+            </div>
+          </div>
+
+          <div class="col-md-5 mb-4"*ngIf="showinstitute"  >
+            <label class="form-label lbl" >LightHouse Branch:</label>
+            <select class="form-select lbl select"  name="lighthouseBranch"  formControlName="lighthouseBranch" [ngModel]="enrollObj?.lighthouseBranch"  >
+                <option selected value="" >---Select Lighthouse Branch---</option>
+                <option *ngFor="let institute of instituteArray" [value]="institute.branchname">{{institute.branchname}}</option>
+                
+              </select>
+              <div class="alert-danger mt-1 lbl3" *ngIf="enrollData.get('lighthouseBranch').invalid && enrollData.get('lighthouseBranch').touched">
+                <div *ngIf="enrollData.get('lighthouseBranch').errors.required">This Field is Required</div>
+                </div>
+     </div>
+
+
+    </div>
+
+    <div class="row">
+
+       
+      <div class="col-md-5 mb-4" >
+        <label class="form-label lbl" >Course:</label>
+        <select class="form-select lbl select" name="course" formControlName="course"  [ngModel]="enrollObj?.course"  >
+            <option selected value="">Select Course</option>
+            <option *ngFor="let course of courseArray" [value]="course.coursename"> {{course.coursename}}</option>
+            
+          </select>
+          <div class="alert-danger mt-1 lbl3" *ngIf="enrollData.get('course').invalid && enrollData.get('course').touched">
+            <div *ngIf="enrollData.get('course').errors.required">This Field is Required</div>
+            </div>
+ </div>
+
+ <div class="col-md-5 mb-4" >
+  <label class="form-label lbl" >Where Did  to come:</label>
+  <select class="form-select lbl select" name="reference" formControlName="reference" [ngModel]="enrollObj?.reference"  >
+      <option selected value="">Select your Reference</option>
+      <option value="social media">Social Media </option>
+      <option value="newse">Newse </option>
+      <option value="paper">Paper </option>
+      <option value="advertisment">Advertisment </option>
+      <option value="youtube">Youtube </option>
+      <option value="friends">Friends </option>
+      <option value="other">Other </option>
+    </select>
+    <div class="alert-danger mt-1 lbl3" *ngIf="enrollData.get('reference').invalid && enrollData.get('reference').touched">
+      <div *ngIf="enrollData.get('reference').errors.required">This Field is Required</div>
+      </div>
+</div>
+
+    </div>
+
+
+    <div class="row">
+       
+      <div class="col-md-5 mb-4">
+        <label class="custom-control-label lbl">Batch Type:</label>
+
+        <div class="custom-control">
+          <input class="custom-control-input lbl" type="radio" name="batch" value="Weekday"  formControlName="batch" [ngModel]="enrollObj?.batch"  >&nbsp;&nbsp;&nbsp;
+          <label class="custom-control-label">
+            Weekday
+          </label>
+        </div>
+        
+        <div class="custom-control">
+          <input class="custom-control-input lbl" type="radio" name="batch" value="Weekend" formControlName="batch" [ngModel]="enrollObj?.batch">&nbsp;&nbsp;&nbsp;
+          <label class="custom-control-label" >
+            Weekend
+          </label>
+          
+        </div>
+      </div>
+
+    </div>
+
+       
+        
+        <div  id="btn">
+        <button class="btn btn-primary mt-4" type="submit">Update</button>
+          </div>
+   
+
+</div>
+
+

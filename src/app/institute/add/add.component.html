@@ -1,0 +1,50 @@
+<form [formGroup]="instituteData" class="row g-4 row justify-content-center align-items-center"  (ngSubmit)="getData(instituteData.value)">
+    <div class="card border-primary shadow-2-strong vh-50 gradient-custom"style="width: 70%; border-radius: 15px;">
+        <div class="card-body border-primary">
+            <div class="note">
+                <h2 class="text-uppercase text-center mb-5 ">Add Institute Details</h2>
+               </div>
+ <div class="form-group">
+    <div class="col-md-5 mb-4">
+        <label class="form-label lbl">  Branch Name:</label>
+    <input type="text" name="branchname"class="form-control" placeholder="Enter Branch Name" formControlName="branchname">
+    <div class="alert-danger mt-1 lbl3" *ngIf="instituteData.get('branchname').invalid && instituteData.get('branchname').touched">
+        <div *ngIf="instituteData.get('branchname').errors.required">This Field is Required</div>
+        <div class="mt-1" *ngIf="instituteData.get('branchname').errors.pattern">Branch Name Should Must Contain Only Charactor min 3 and max 30.</div>
+      </div>
+   </div>
+   </div>
+
+
+   <div class="form-group">
+     <div class="col-md-5 mb-4">
+       <label class="form-label lbl"> Enter City :</label>
+    <input type="text" name="city" class="form-control" placeholder="Enter City"  formControlName="city">
+    <div class="alert-danger mt-1 lbl3" *ngIf="instituteData.get('city').invalid && instituteData.get('city').touched">
+        <div *ngIf="instituteData.get('city').errors.required">This Field is Required</div>
+        
+      </div>
+   </div>
+   </div>
+
+   <div class="form-group">
+    <div class="col-md-5 mb-4">
+        <label class="form-label lbl"> Contact:</label>
+    <input type="text" name="contact" class="form-control" placeholder="Enter Contact No" maxlength="10" formControlName="contact">
+    <div class="alert-danger mt-1 lbl3" *ngIf="instituteData.get('contact').invalid && instituteData.get('contact').touched">
+        <div *ngIf="instituteData.get('contact').errors.required">This Field is Required</div>
+        <div class="mt-1" *ngIf="instituteData.get('contact').errors.pattern">Phone number with 7-9 and remaing 9 digit with 0-9..</div>
+      </div>
+   </div>
+    </div>
+
+   
+
+   <div class="mx-3 mt-3">
+    <div  id="btn">
+       <button type="submit" class="btn btn-primary" [disabled]="instituteData.invalid">Submit</button>
+   </div>
+   </div>
+   </div>
+   </div>
+</form>

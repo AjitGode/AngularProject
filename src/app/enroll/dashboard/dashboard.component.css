@@ -1,0 +1,13 @@
+strong{
+    color:royalblue;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 50px;
+}
+h2{
+    color:black;
+    justify-content:center
+}
+.modal-header{
+    justify-content: center;
+    left: 50px;
+}

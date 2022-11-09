@@ -1,0 +1,78 @@
+mat-sidenav {
+    margin: 16px;
+    width: 250px;
+    border-right: none;
+    background:#91c5ce;
+    color: white;
+    border-radius: 10px;
+    padding: 16px;
+    text-align: center;
+    /* position:fixed;
+    top: 150px;
+    height: 550px;
+    overflow:auto;  */
+    
+}
+button{
+    width: 120px;
+    padding: 5px auto;
+    margin: auto;
+    margin-bottom: 40px;
+    border-radius: 5px;
+}
+button:hover{
+    width: 130px;
+    background-color:darksalmon;
+}
+
+.content {
+    height: calc(100vh - 98px);
+    border-radius: 10px;
+    margin: 16px;
+    margin-left: 32px;
+    margin-top: 120px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 5rem;
+   
+}
+   /* .card-header{
+     
+    position:fixed;
+    top: 0;
+    width: 1295px;
+    z-index: 2;
+    
+    background-color: cornsilk;
+}   
+.card{
+    margin-top: 138px;
+    height: 100%;
+    
+    overflow: auto;
+}  */
+
+
+
+.main-body{
+    height: 130vh;
+    margin-left: 20px;
+    margin-top: 200px;
+    justify-content: center;
+    background-image: url(../assets/stud.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-size:500px 500px;
+    background-position: 50% 95%;
+    
+    position: relative;
+}
+
+
+
+
+

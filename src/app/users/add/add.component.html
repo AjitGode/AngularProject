@@ -1,0 +1,74 @@
+
+<form [formGroup]=userData class="row g-4 row justify-content-center align-items-center"  (ngSubmit)="getData(userData.value)">
+    <div class="card border-primary shadow-2-strong vh-50 gradient-custom"style="width: 70%; border-radius: 15px;">
+        <div class="card-body border-primary">
+            <div class="note">
+                <h2 class="text-uppercase text-center mb-5 ">Add User Details</h2>
+               </div>
+ <div class="form-group">
+    <div class="col-md-5 mb-4">
+        <label class="form-label lbl">Enter  Employee ID:</label>
+    <input type="text" name="empid"class="form-control" placeholder="Enter Employee Id" formControlName="empid" >
+    <div class="alert-danger mt-1 lbl3" *ngIf="userData.get('empid').invalid && userData.get('empid').touched">
+        <div *ngIf="userData.get('empid').errors.required">This Field is Required</div>
+       
+      </div>
+   </div>
+   </div>
+
+   <div class="form-group">
+    <div class="col-md-5 mb-4">
+        <label class="form-label lbl"> Employee Name:</label>
+    <input type="text" name="name"class="form-control" placeholder="Enter Employee Name" formControlName="name">
+    <div class="alert-danger mt-1 lbl3" *ngIf="userData.get('name').invalid && userData.get('name').touched">
+        <div *ngIf="userData.get('name').errors.required">This Field is Required</div>
+        <div class="mt-1" *ngIf="userData.get('name').errors.pattern">Employee Name Should Must Contain Only Charactor min 3 and max 30.</div>
+      </div>
+   </div>
+   </div>
+
+
+   <div class="form-group">
+     <div class="col-md-5 mb-4">
+       <label class="form-label lbl"> Password:</label>
+    <input type="password" name="password" class="form-control" placeholder="Enter Password"  formControlName="password">
+    <div class="alert-danger mt-1 lbl3" *ngIf="userData.get('password').invalid && userData.get('password').touched">
+        <div *ngIf="userData.get('password').errors.required">This Field is Required</div>
+        <div class="mt-1" *ngIf="userData.get('password').errors.pattern">Password Should be One Capital Letter And One symbol and maximum 8 character</div>
+      </div>
+   </div>
+   </div>
+
+   <div class="form-group">
+    <div class="col-md-5 mb-4">
+        <label class="form-label lbl"> Contact No:</label>
+    <input type="text" name="contact" class="form-control" placeholder="Enter Contact No" maxlength="10" formControlName="contact">
+    <div class="alert-danger mt-1 lbl3" *ngIf="userData.get('contact').invalid && userData.get('contact').touched">
+        <div *ngIf="userData.get('contact').errors.required">This Field is Required</div>
+        <div class="mt-1" *ngIf="userData.get('contact').errors.pattern">Enter Only Numbers</div>
+      </div>
+   </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-md-5 mb-4">
+            <label class="form-label lbl"> Email:</label>
+        <input type="email" name="email" class="form-control" placeholder="Enter Your Email"  formControlName="email">
+        <div class="alert-danger mt-1 lbl3" *ngIf="userData.get('email').invalid && userData.get('email').touched">
+            <div *ngIf="userData.get('email').errors.required">This Field is Required</div>
+            <div class="mt-1" *ngIf="userData.get('email').errors.pattern">Enter Proper Email</div>
+          </div>
+       </div>
+        </div>
+
+   
+
+   <div class="mx-3 mt-3">
+    <div  id="btn">
+       <button type="submit" class="btn btn-primary" [disabled]="userData.invalid" >Submit</button>
+   </div>
+   </div>
+   </div>
+   </div>
+</form>
+
